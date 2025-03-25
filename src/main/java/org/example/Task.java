@@ -5,11 +5,21 @@ public class Task {
     private long id;
     private String name;
     private boolean completed;
+    private boolean inProgress;
+
+    public boolean isInProgress() {
+        return inProgress;
+    }
+
+    public void setInProgress(boolean inProgress) {
+        this.inProgress = inProgress;
+    }
 
     public  Task(String name){
         id = Main.currentId++;
         this.name = name;
         completed = false;
+        inProgress = false;
     }
 
     public Task() {
